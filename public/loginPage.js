@@ -11,3 +11,5 @@ let formHandler = (method, errorBox) => data => method(data, response => {
 });
 
 userForm.loginFormCallback = formHandler(ApiConnector.login, userForm.setLoginErrorMessage.bind(userForm));
+
+userForm.registerFormCallback = formHandler(ApiConnector.register, userForm.setRegisterErrorMessage.bind(userForm));
